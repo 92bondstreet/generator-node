@@ -59,6 +59,10 @@ module.exports = yeoman.generators.Base.extend({
       message: 'Description',
       default: 'The best module ever.'
     }, {
+      name: 'keynote',
+      message: 'Keynote',
+      default: 'The best module ever.'
+    }, {
       name: 'homepage',
       message: 'Homepage'
     }, {
@@ -117,7 +121,7 @@ module.exports = yeoman.generators.Base.extend({
   app: function () {
     this.config.save();
     this.copy('editorconfig', '.editorconfig');
-    this.copy('jshintrc', '.jshintrc');
+    this.copy('eslintrc', '.eslintrc');
     this.copy('gitignore', '.gitignore');
     this.copy('gitattributes', '.gitattributes');
     this.copy('travis.yml', '.travis.yml');

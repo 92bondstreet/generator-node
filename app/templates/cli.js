@@ -4,7 +4,7 @@ var meow = require('meow');
 var <%= safeSlugname %> = require('./');
 
 var cli = meow({
-  help: [
+  'help': [
     'Usage',
     '  <%= slugname %> <input>',
     '',

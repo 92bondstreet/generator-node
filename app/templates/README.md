@@ -1,7 +1,10 @@
-# <%= props.slugname %> [![NPM version][npm-image]][npm-url] [![Build Status][travis-image]][travis-url] [![Dependency Status][daviddm-url]][daviddm-image]
+# <%= slugname %> [![NPM version][npm-image]][npm-url] [![Build Status][travis-image]][travis-url] [![Dependency Status][daviddm-url]][daviddm-image]
 
 > <%= props.description %>
 
+## Keynote
+
+<%= props.keynote %>
 
 ## Install
 

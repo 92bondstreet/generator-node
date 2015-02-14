@@ -1,3 +1,4 @@
+/*eslint-disable quote-props */
 'use strict';
 module.exports = function (grunt) {
   // Show elapsed time at the end
@@ -6,10 +7,9 @@ module.exports = function (grunt) {
   require('load-grunt-tasks')(grunt);
 
   grunt.initConfig({
-    jshint: {
+    eslint: {
       options: {
-        jshintrc: '.jshintrc',
-        reporter: require('jshint-stylish')
+        configFile: '.eslintrc'
       },
       gruntfile: {
         src: ['Gruntfile.js']
@@ -30,19 +30,19 @@ module.exports = function (grunt) {
     },
     watch: {
       gruntfile: {
-        files: '<%%= jshint.gruntfile.src %>',
-        tasks: ['jshint:gruntfile']
+        files: '<%%= eslint.gruntfile.src %>',
+        tasks: ['eslint:gruntfile']
       },
       js: {
-        files: '<%%= jshint.js.src %>',
-        tasks: ['jshint:js', 'mochacli']
+        files: '<%%= eslint.js.src %>',
+        tasks: ['eslint:js', 'mochacli']
       },
       test: {
-        files: '<%%= jshint.test.src %>',
-        tasks: ['jshint:test', 'mochacli']
+        files: '<%%= eslint.test.src %>',
+        tasks: ['eslint:test', 'mochacli']
       }
     }
   });
 
-  grunt.registerTask('default', ['jshint', 'mochacli']);
+  grunt.registerTask('default', ['eslint', 'mochacli']);
 };
