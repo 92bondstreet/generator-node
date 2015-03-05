@@ -12,7 +12,7 @@
   "license": "<%= props.license %>",
   "files": [
     "index.js"<% if (props.cli) { %>,
-    "cli.js"<% } %>
+    "./bin/cli.js"<% } %>
   ],
   "keywords": [
     "<%= slugname %>"<% for (var i = 0; i < keywords.length; i++) { %>,

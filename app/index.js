@@ -138,7 +138,9 @@ module.exports = yeoman.generators.Base.extend({
   projectfiles: function () {
     this.template('index.js', 'index.js');
     this.mkdir('test');
-    this.template('test/test.js', 'test/test.js');
+    this.template('test/test.js', 'test/'+this.slugname+'.spec.js');
+    this.mkdir('lib');
+    this.template('lib/index.js', 'lib/'+this.slugname+'.js');
   },
 
   install: function () {

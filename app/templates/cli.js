@@ -1,7 +1,7 @@
 #!/usr/bin/env node
 'use strict';
 var meow = require('meow');
-var <%= safeSlugname %> = require('./');
+var <%= safeSlugname %> = require('./index');
 
 var cli = meow({
   'help': [
